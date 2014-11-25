@@ -15,15 +15,15 @@
     </head>
     <body>
         <h1>Onkosten 
-            <%--<c:out value="${requestScope.id}"/>--%>
+            <c:out value="${requestScope.id}"/>
         </h1>
         
         <c:forEach var="Onkost" items="${requestScope.onkosten}">       
             <fieldset>
-                <legend>Personalia:</legend>
-                Name: <input type="text"><br>
-                Email: <input type="text"><br>
-                Date of birth: <input type="text">
+                <legend><c:out value="${Onkost.id}"/></legend>
+                Description: <c:out value="${Onkost.descr}"/><br>
+                Data       : <c:out value="${Onkost.date}"/><br>
+                Credit     : <c:out value="${Onkost.credit}"/><br>
             </fieldset>
         </c:forEach> 
          <form method = "post" action=<%= response.encodeURL("Controller")%>>

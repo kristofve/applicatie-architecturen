@@ -40,7 +40,7 @@ public class Controller extends HttpServlet {
             RequestDispatcher view = request.getRequestDispatcher("TeVervangen.jsp");
             view.forward(request, response);
         }
-        if(state.equals("Onkosten")){
+        if(state.equals("Onkosten")){ 
             RequestDispatcher view = request.getRequestDispatcher("Onkosten.jsp");
             view.forward(request, response);
         }
