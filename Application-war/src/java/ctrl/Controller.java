@@ -40,6 +40,11 @@ public class Controller extends HttpServlet {
             RequestDispatcher view = request.getRequestDispatcher("TeVervangen.jsp");
             view.forward(request, response);
         }
+        if(state.equals("new")){
+            //new Onkosten aanmaken met huidige datum
+            RequestDispatcher view = request.getRequestDispatcher("Onkosten.jsp");
+            view.forward(request, response);
+        }
         if(state.equals("Onkosten")){ 
             RequestDispatcher view = request.getRequestDispatcher("Onkosten.jsp");
             view.forward(request, response);

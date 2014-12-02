@@ -17,7 +17,10 @@
         <h1>Onkosten 
             <c:out value="${requestScope.id}"/>
         </h1>
-        
+        <form method = "post" action=<%= response.encodeURL("Controller")%>>
+            <button type="submit" style="background-color:transparent; border-color:transparent;"> <img src="icon.png" height="35"/></button>
+            <input type="hidden" name="state" value="new">
+        </form>
         <c:forEach var="Onkost" items="${requestScope.onkosten}">       
             <fieldset>
                 <legend><c:out value="${Onkost.id}"/></legend>
